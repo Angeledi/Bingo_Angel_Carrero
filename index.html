@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KawaBingo!!!</title>
+  </head>
+  <body>
+    <section>
+      <div>
+        <h1>KawaBingo!!!</h1>
+        <p>Juega bingo con tus amigos!!</p>
+      </div>
+    </section>
+
+    <form>
+      <section class="inicio">
+        <label>
+          <div>Nombre Jugador 1:</div>
+          <input
+            onchange="HandleNameChance"
+            type="text"
+            placeholder="Ingrese un nombre"
+            id="jugador1"
+          />
+        </label>
+        <label>
+          <div>Nombre Jugador 2:</div>
+          <input
+            onchange="HandleNameChance"
+            type="text"
+            placeholder="Ingrese un nombre"
+            id="jugador2"
+          />
+        </label>
+        <label>
+          <div>Nombre Jugador 3:</div>
+          <input
+            onchange="HandleNameChance"
+            type="text"
+            placeholder="Ingrese un nombre"
+            id="jugador3"
+          />
+        </label>
+        <label>
+          <div>Nombre Jugador 4:</div>
+          <input
+            onchange="HandleNameChance"
+            type="text"
+            placeholder="Ingrese un nombre"
+            id="jugador4"
+          />
+        </label>
+        <label>
+          <div>Tamano del carton:</div>
+          3<input onchange="HandleNameChance" type="checkbox" id="tamano3" />
+          4<input onchange="HandleNameChance" type="checkbox" id="tamano4" />
+          5<input onchange="HandleNameChance" type="checkbox" id="tamano5" />
+        </label>
+      </section>
+    </form>
+
+    <section class="bingo" style="display: none">
+        <h3>Jugador <span id="numerojugador">1</span></h2>
+      <div id="matriz-container"></div>
+      <button id="tirada" onclick="turnofunc()">TIRADA</button>
+      <button id="izquierda" onclick="anterior()">Anterior jugador</button>
+      <button id="derecha" onclick="siguiente()">Siguiente jugador</button>
+      <h3>Ultima que salio: <span id="ultimabola"></span></h2>
+      <h3>Turnos restantes: <span id="numeroturno">25</span></h2>
+    </section>
+    <section class="pts" style="display: none">
+        <h>Puntajes:</h>
+        <div>Jugador 1 :<span id="name1">0</span> </div>
+        <div>Jugador 2 :<span id="name2">0</span> </div>
+        <div>Jugador 3 :<span id="name3">0</span> </div>
+        <div>Jugador 4 :<span id="name4">0</span> </div>
+        <button onclick="switchSectiof()">menu</button>
+    </section>
+
+    <button id="jugar" onclick="verificarCheckboxes()">jugar</button>
+    <script src="./script.js"></script>
+  </body>
+</html>
